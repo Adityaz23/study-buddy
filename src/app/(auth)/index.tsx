@@ -30,10 +30,10 @@ const AuthScreen = () => {
             <View className="w-16 h-16 rounded-[20px] bg-primary items-center justify-center border border-primary">
               <MaterialIcons name="school" size={30} color="#A29BFE" />
             </View>
-            <Text className="text-3xl font-extrabold text-foreground tracking-tight mt-4 font-mono">
+            <Text className="text-3xl font-extrabold text-slate-800 tracking-tight mt-4 font-mono">
               Study-Buddy
             </Text>
-            <Text className="text-foreground-muted text-[15px] mt-1.5 tracking-wide">
+            <Text className="text-surface-dark text-[15px] mt-1.5 tracking-wide">
               Learn together, grow together
             </Text>
           </View>
@@ -144,7 +144,7 @@ const AuthScreen = () => {
               )}
             </Pressable>
           </View>
-          <Text className="text-foreground-subtle text-[10px] text-center leading-4">
+          <Text className="text-zinc-800 text-[10px] text-center leading-4">
             By continuing , you agree to our{" "}
             <Text className="text-zinc-800 font-bold underline">
               Terms of Service{" "}

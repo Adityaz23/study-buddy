@@ -6,45 +6,28 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        // Primary Brand
-        primary: {
-          DEFAULT: "#4F46E5", // Indigo-600
-          light: "#6366F1",
-          dark: "#4338CA",
-        },
+        primary: "#6C5CE7",
+        "primary-dark": "#5A4BD1",
+        "primary-light": "#A29BFE",
 
-        // Backgrounds
-        background: {
-          DEFAULT: "#F9FAFB", // Light gray background
-          dark: "#0F172A", // Dark mode main bg
-        },
+        background: "#0F0E17",
+        surface: "#1A1A2E",
+        "surface-dark": "#0F0E17",
+        "surface-light": "#16213E",
 
-        // Chat bubbles
-        bubble: {
-          sent: "#4F46E5", // Sent message
-          received: "#E5E7EB", // Received message
-          sentDark: "#4338CA",
-          receivedDark: "#1E293B",
-        },
+        foreground: "#FFFFFE",
+        "foreground-muted": "#A7A9BE",
+        "foreground-subtle": "#72757E",
 
-        // Status colors
-        success: "#22C55E", // Online / active
-        danger: "#EF4444", // End call
-        warning: "#F59E0B",
+        accent: "#FF6B6B",
+        "accent-secondary": "#00B894",
 
-        // Text
-        text: {
-          primary: "#111827",
-          secondary: "#6B7280",
-          darkPrimary: "#F3F4F6",
-          darkSecondary: "#9CA3AF",
-        },
+        success: "#00B894",
+        warning: "#FDCB6E",
+        danger: "#FF6B6B",
 
-        // Borders
-        border: {
-          light: "#E5E7EB",
-          dark: "#334155",
-        },
+        border: "#232946",
+        "border-light": "#2E3354",
       },
     },
   },
