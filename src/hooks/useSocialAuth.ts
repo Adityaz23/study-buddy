@@ -42,7 +42,7 @@ const useSocialAuth = () => {
             : "Github";
       Alert.alert(
         "Error",
-        `Failed to sign in with ,${provider}. Please try again.`,
+        `Failed to sign in with ${provider}. Please try again.`,
       );
     } finally {
       setLoadingStat(null);
