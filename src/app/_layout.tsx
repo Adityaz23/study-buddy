@@ -2,6 +2,7 @@ import { Stack } from "expo-router";
 import "../../global.css";
 import { ClerkProvider } from "@clerk/clerk-expo";
 import { tokenCache } from "@clerk/clerk-expo/token-cache";
+import { GestureHandlerRootView } from "react-native-gesture-handler";
 
 import * as Sentry from "@sentry/react-native";
 
@@ -28,13 +29,22 @@ Sentry.init({
 });
 
 export default function RootLayout() {
+  // fetch("/token",{
+  //   method: "POST",
+  //   headers:{
+  //     "Content-Type": "applications/json"
+  //   },
+  //   body: JSON.stringify({userId:"user-id"})
+  // })
   return (
     // This token is to keep the info of the user even if they close the app.
     <ClerkProvider tokenCache={tokenCache}>
-      <Stack screenOptions={{ headerShown: false }}>
-        <Stack.Screen name="(auth)" />
-        <Stack.Screen name="(tabs)" />
-      </Stack>
+      <GestureHandlerRootView className="flex-1">
+        <Stack screenOptions={{ headerShown: false }}>
+          <Stack.Screen name="(auth)" />
+          <Stack.Screen name="(tabs)" />
+        </Stack>
+      </GestureHandlerRootView>
     </ClerkProvider>
   );
 }
