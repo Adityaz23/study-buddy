@@ -8,7 +8,8 @@
     "scheme": "studybuddy",
     "userInterfaceStyle": "automatic",
     "ios": {
-      "icon": "./assets/expo.icon"
+      "icon": "./assets/expo.icon",
+      "bundleIdentifier": "com.adityaz9000.study-buddy"
     },
     "android": {
       "adaptiveIcon": {
@@ -34,6 +35,14 @@
             "image": "./assets/images/splash-icon.png",
             "imageWidth": 76
           }
+        }
+      ],
+      [
+        "@sentry/react-native/expo",
+        {
+          "url": "https://sentry.io/",
+          "project": "study-buddy-app",
+          "organization": "aditya-r0"
         }
       ]
     ],
