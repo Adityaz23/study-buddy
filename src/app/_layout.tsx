@@ -5,6 +5,8 @@ import { tokenCache } from "@clerk/clerk-expo/token-cache";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 
 import * as Sentry from "@sentry/react-native";
+import { AppProvider } from "@/context/AppProvider";
+import ChatWrapper from "@/components/ChatWrap";
 
 Sentry.init({
   dsn: "https://00c29f8afaf7987d3f83d2857e97423f@o4510975572115456.ingest.de.sentry.io/4510975581225041",
@@ -40,10 +42,14 @@ export default function RootLayout() {
     // This token is to keep the info of the user even if they close the app.
     <ClerkProvider tokenCache={tokenCache}>
       <GestureHandlerRootView className="flex-1">
-        <Stack screenOptions={{ headerShown: false }}>
-          <Stack.Screen name="(auth)" />
-          <Stack.Screen name="(tabs)" />
-        </Stack>
+        <ChatWrapper>
+          <AppProvider>
+            <Stack screenOptions={{ headerShown: false }}>
+              <Stack.Screen name="(auth)" />
+              <Stack.Screen name="(tabs)" />
+            </Stack>
+          </AppProvider>
+        </ChatWrapper>
       </GestureHandlerRootView>
     </ClerkProvider>
   );

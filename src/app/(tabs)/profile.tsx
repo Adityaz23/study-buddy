@@ -8,6 +8,7 @@ import { COLORS } from "@/lib/theme";
 import MaterialIcons from "@expo/vector-icons/MaterialIcons";
 import { ScrollView } from "react-native";
 import * as Sentry from "@sentry/react-native";
+import { useAppContext } from "@/context/AppProvider";
 
 // The array for the icons :-
 const MENU_ITEMS = [
@@ -29,6 +30,7 @@ const ProfileScreen = () => {
   // importing the sign out method to let the user sign out.
   const { signOut } = useAuth();
   const { user } = useUser();
+  // const {} = useAppContext();
   return (
     <SafeAreaView className="flex-1 bg-background">
       <ScrollView
