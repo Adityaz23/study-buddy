@@ -18,7 +18,8 @@
         "backgroundImage": "./assets/images/android-icon-background.png",
         "monochromeImage": "./assets/images/android-icon-monochrome.png"
       },
-      "predictiveBackGestureEnabled": false
+      "predictiveBackGestureEnabled": false,
+      "package": "com.adityaz9000.studybuddy"
     },
     "web": {
       "output": "server",
@@ -44,7 +45,8 @@
           "project": "study-buddy-app",
           "organization": "aditya-r0"
         }
-      ]
+      ],
+      "@sentry/react-native"
     ],
     "experiments": {
       "typedRoutes": true,
